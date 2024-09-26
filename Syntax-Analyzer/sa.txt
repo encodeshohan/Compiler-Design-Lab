@@ -1,0 +1,26 @@
+Syntax Analyzer Code Snippet 1
+
+Representing a CFG inside a Syntax Analyzer Program:
+
+char grammar_rules[5][10] = {"A->BCBDBE.","B->i.","C->=.","D->+.","E->;."};
+
+Syntax Analyzer Code Snippet 2
+
+Taking the tokens as input and simplifying those tokens:
+
+cout<< "Enter the input token:";
+getline (cin, input_token);
+
+cout<< "The entered token was:"<<input_token<<endl;
+
+
+statement_index=0;
+  
+for(input_token_index=0;input_token_index<input_token.length();input_token_index++){
+    if(input_token[input_token_index]=='<'){
+        statement[statement_index] = input_token[input_token_index+1];
+        cout<<statement[statement_index]<<endl;
+        statement_index++;
+    }
+}
+
